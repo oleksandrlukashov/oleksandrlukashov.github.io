@@ -205,7 +205,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 128px;
+  max-width: 128px;
   margin-right: 8px;
 }
 
@@ -234,6 +235,47 @@ h6 {
   .navmenu {
     padding: 0;
   }
+
+  /* Hover-эффект для ссылок */
+  .navmenu a:hover,
+  .navmenu li:hover > a {
+    color: var(--nav-hover-color);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Подчёркивание при наведении */
+  .navmenu>ul>li>a::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .navmenu a:hover::before,
+  .navmenu li:hover > a::before,
+  .navmenu .active::before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  /* Плавное появление dropdown */
+  .navmenu .dropdown ul {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .navmenu .dropdown:hover > ul {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 
   .navmenu ul {
     margin: 0;

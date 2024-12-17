@@ -1,10 +1,10 @@
 /**
-* Template Name: Personal
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Updated: Nov 04 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: Personal
+ * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+ * Updated: Nov 04 2024 with Bootstrap v5.3.3
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
 (function() {
   "use strict";
@@ -199,6 +199,34 @@
       }, false);
     });
 
+  });
+
+  /**
+   * Contact Form Validation and Submission
+   */
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const surname = document.getElementById('surname').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const attr1 = document.getElementById('attr1').value;
+    const attr2 = document.getElementById('attr2').value;
+    const attr3 = document.getElementById('attr3').value;
+    const attr4 = document.getElementById('attr4').value;
+    const attr5 = document.getElementById('attr5').value;
+
+    // Validation
+    if (!name || !surname || !email || !phone || !address || !attr1 || !attr2 || !attr3 || !attr4 || !attr5) {
+      document.getElementById('result').innerText = 'Please fill in all fields!';
+      return;
+    }
+
+    // If all fields are filled, simulate form submission
+    document.getElementById('result').innerText = 'Form submitted successfully!';
+    // Here you can send the form data using AJAX if needed.
   });
 
 })();

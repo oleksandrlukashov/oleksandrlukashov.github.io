@@ -42,9 +42,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Personal Website</h1>
+        <img src="assets/img/logo.png" alt="">
+        <h1 class="sitename">Oleksandr Lukashov</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -65,17 +64,179 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-
       <img src="assets/img/wp3710143.jpg" alt="" data-aos="fade-in">
-
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <h2>Oleksandr Lukashov</h2>
-        <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer">Developer</span><span class="typed-cursor typed-cursor--blink"></span></p>
+        <p>I'm a <span class="typed" data-typed-items="Designer, Developer, Freelancer">Developer</span><span class="typed-cursor typed-cursor--blink"></span></p>
       </div>
-
-    </section><!-- /Hero Section -->
-
+    </section>
+  
+    <!-- Contact Form Section -->
+    <section id="contact-form">
+      <div class="container">
+        <h2>Contact Form</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="surname">Last Name:</label>
+            <input type="text" id="surname" name="surname" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+          </div>
+          <h4>Additional Numerical Attributes:</h4>
+          <div class="form-group">
+            <label for="attr1">Attribute 1:</label>
+            <input type="number" id="attr1" name="attr1" required>
+          </div>
+          <div class="form-group">
+            <label for="attr2">Attribute 2:</label>
+            <input type="number" id="attr2" name="attr2" required>
+          </div>
+          <div class="form-group">
+            <label for="attr3">Attribute 3:</label>
+            <input type="number" id="attr3" name="attr3" required>
+          </div>
+          <div class="form-group">
+            <label for="attr4">Attribute 4:</label>
+            <input type="number" id="attr4" name="attr4" required>
+          </div>
+          <div class="form-group">
+            <label for="attr5">Attribute 5:</label>
+            <input type="number" id="attr5" name="attr5" required>
+          </div>
+          <button type="submit" id="submitBtn">Submit</button>
+        </form>
+        <div id="result"></div>
+      </div>
+    </section>
+  
   </main>
+  
+  <!-- Additional Styles -->
+  <style>
+    .main {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+  
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-color: #000;
+      background-image: url('assets/img/wp3710143.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .hero .container {
+      text-align: center;
+      color: #fff;
+    }
+  
+    .hero h2 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    .hero p {
+      font-size: 24px;
+      font-weight: 400;
+    }
+  
+    .hero .typed {
+      font-weight: 700;
+    }
+  
+    #contact-form {
+      padding: 50px 0;
+      background-color: #fff;
+      text-align: center;
+    }
+  
+    #contact-form .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    #contact-form h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+  
+    .form-group {
+      margin-bottom: 20px;
+    }
+  
+    .form-group label {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      display: block;
+      margin-bottom: 5px;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  
+    .form-group textarea {
+      resize: vertical;
+      height: 150px;
+    }
+  
+    #submitBtn {
+      padding: 15px 30px;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    #submitBtn:hover {
+      background-color: #0056b3;
+    }
+  
+    #result {
+      margin-top: 30px;
+      font-size: 18px;
+      color: green;
+    }
+  
+    h4 {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #333;
+    }
+  </style>
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
@@ -97,7 +258,7 @@
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by Oleksandr Lukashov</a>
         </div>
       </div>
     </div>
